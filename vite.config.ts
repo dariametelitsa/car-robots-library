@@ -12,7 +12,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'car-robots-library',
       fileName: (format) => `car-robots-library.${format}.js`,
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react/jsx-runtime',...Object.keys(dependencies), ...Object.keys(devDependencies)],
@@ -20,10 +20,6 @@ export default defineConfig({
         dir: 'dist',
         entryFileNames: '[name].js',
         format: 'es',
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
       },
     },
     sourcemap: true,
