@@ -12,10 +12,17 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'car-robots-library',
       fileName: 'index',
-      formats: ['es', 'cjs'],
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['react/jsx-runtime',...Object.keys(dependencies), ...Object.keys(devDependencies)],
+      output: {
+        dir: 'dist',
+        entryFileNames: '[name].js',
+        format: 'es',
+      },
     },
+    sourcemap: true,
+    target: 'esnext',
   },
 })
