@@ -1,10 +1,10 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/car-robots-library.umd.js",
+  "module": "dist/car-robots-library.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",

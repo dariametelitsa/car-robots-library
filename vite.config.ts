@@ -11,7 +11,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'car-robots-library',
-      fileName: 'index',
+      fileName: (format) => `car-robots-library.${format}.js`,
       formats: ['es'],
     },
     rollupOptions: {
@@ -20,6 +20,10 @@ export default defineConfig({
         dir: 'dist',
         entryFileNames: '[name].js',
         format: 'es',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
       },
     },
     sourcemap: true,
