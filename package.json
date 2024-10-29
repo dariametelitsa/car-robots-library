@@ -1,7 +1,7 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.0.16",
+  "version": "0.0.17",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
-    "class-variance-authority": "^0.7.0"
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.5.2"
   },
   "peerDependencies": {
     "react": "^18.3.1",
@@ -53,7 +54,6 @@
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "storybook": "8.3.6",
-    "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
