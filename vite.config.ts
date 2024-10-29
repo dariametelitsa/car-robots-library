@@ -16,11 +16,6 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react/jsx-runtime',...Object.keys(dependencies), ...Object.keys(devDependencies)],
-      output: {
-        dir: 'dist',
-        entryFileNames: '[name].js',
-        format: 'es',
-      },
     },
     sourcemap: true,
     target: 'esnext',
