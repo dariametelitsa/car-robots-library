@@ -8,10 +8,12 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    '@storybook/addon-viewport'
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
+  staticDirs: ['../public'],
 };
 export default config;
