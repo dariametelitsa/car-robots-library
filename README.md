@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Car Robots Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![npm version](https://img.shields.io/npm/v/car-robots-library.svg)](https://www.npmjs.com/package/car-robots-library)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A collection of reusable React components for building car-related user interfaces.
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Styling](#styling)
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To install the `car-robots-library`, you can use npm or yarn:
+
+```sh
+npm install car-robots-library
+```
+or
+
+```sh
+yarn add car-robots-library
+```
+## Usage
+
+Import the components you need from the library and use them in your React application:
+
+```jsx
+import React from 'react';
+import { Button, AnotherComponent } from 'car-robots-library';
+
+const App = () => {
+    return (
+        <div>
+            <Button>Click me</Button>
+            <AnotherComponent />
+        </div>
+    );
+};
+
+export default App;
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Components
+- Button
+- Card
+- Icon set
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Styling
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+The car-robots-library uses Tailwind CSS for styling. You don't need to install Tailwind CSS separately; the library includes all necessary styles.
+
+To ensure the styles are applied correctly, import the CSS file from the library in your main entry file:
+```jsx
+import 'car-robots-library/dist/style.css'; 
 ```
+
+## Contact
+
+For any questions or issues, please open an issue on the GitHub repository.
+
+Thank you for using car-robots-library!
