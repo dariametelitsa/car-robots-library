@@ -2,11 +2,17 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
+import tailwindcss from 'tailwindcss'
 
 import {peerDependencies, devDependencies} from './package.json'
 
 export default defineConfig({
   plugins: [react(), dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
