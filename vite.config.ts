@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
 
-import {dependencies, devDependencies} from './package.json'
+import {peerDependencies, devDependencies} from './package.json'
 
 export default defineConfig({
   plugins: [react(), dts({ tsconfigPath: './tsconfig.app.json', rollupTypes: true })],
@@ -15,7 +15,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react/jsx-runtime',...Object.keys(dependencies), ...Object.keys(devDependencies)],
+      external: ['react/jsx-runtime',...Object.keys(peerDependencies), ...Object.keys(devDependencies)],
       output: {
         dir: 'dist',
         entryFileNames: '[name].js',
