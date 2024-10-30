@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/car-robots-library.svg)](https://www.npmjs.com/package/car-robots-library)
 
+[![License](https://img.shields.io/npm/l/car-robots-library.svg)](https://github.com/dariametelitsa/car-robots-library/blob/main/LICENSE)
+
 
 A collection of reusable React components for building car-related user interfaces.
 
@@ -50,6 +52,7 @@ export default App;
 - Icon set
 - Loader
 - Go to top button
+- Modal
 
 ## Styling
 
