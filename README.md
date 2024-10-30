@@ -54,6 +54,7 @@ export default App;
 - Go to top button
 - Modal
 - Calendar
+- Checkbox
 
 ## Styling
 
