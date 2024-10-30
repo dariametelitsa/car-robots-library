@@ -1,7 +1,7 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -58,7 +58,8 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9",
-    "vite-plugin-dts": "^4.3.0"
+    "vite-plugin-dts": "^4.3.0",
+    "framer-motion": "^11.11.9"
   },
   "eslintConfig": {
     "extends": [

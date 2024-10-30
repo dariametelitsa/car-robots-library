@@ -48,6 +48,8 @@ export default App;
 - Button
 - Card
 - Icon set
+- Loader
+- Go to top button
 
 ## Styling
 
