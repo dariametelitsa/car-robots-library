@@ -53,6 +53,7 @@ export default App;
 - Loader
 - Go to top button
 - Modal
+- Calendar
 
 ## Styling
 
