@@ -1,8 +1,8 @@
 # Car Robots Library
 
-[![npm version](https://img.shields.io/npm/v/car-robots-library.svg)](https://www.npmjs.com/package/car-robots-library)
+[![npm version](https://img.shields.io/npm/v/car-robots-library.svg?color=blue)](https://www.npmjs.com/package/car-robots-library)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dariametelitsa/car-robots-library/main/LICENSE)
 
-[![License](https://img.shields.io/npm/l/car-robots-library.svg)](https://github.com/dariametelitsa/car-robots-library/blob/main/LICENSE)
 
 
 A collection of reusable React components for building car-related user interfaces.

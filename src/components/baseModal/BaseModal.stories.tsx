@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from "@storybook/react";
 
 import {
   Dialog,
@@ -8,18 +8,23 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from './BaseModal'
+} from "./BaseModal";
 import { Button } from "../button";
+import { Typography } from "../typography";
+import { SimpleModal } from "./SimpleModal.tsx";
+import { useState } from "react";
 
 const meta = {
   component: Dialog,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  title: "Component/Modal",
+} satisfies Meta<typeof Dialog>;
 
-  tags: ['autodocs'],
-  title: 'Component/Modal',
-} satisfies Meta<typeof Dialog>
-
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const BasicModal: Story = {
   render: () => {
@@ -27,10 +32,7 @@ export const BasicModal: Story = {
       <>
         <Dialog>
           <DialogTrigger>
-            <Button
-              className={'w-full'}
-              type={'button'}
-            >
+            <Button className={"w-full"} type={"button"}>
               Click me!
             </Button>
           </DialogTrigger>
@@ -42,29 +44,24 @@ export const BasicModal: Story = {
               Dialog description dialog description dialog description.
             </DialogDescription>
             <DialogFooter>
-              <Button
-                className={'w-full'}
-                type={'button'}
-              >
+              <Button className={"w-full"} type={"button"}>
                 Footer for button
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </>
-    )
+    );
   },
-}
+};
+
 export const ModalWithoutCross: Story = {
   render: () => {
     return (
       <>
         <Dialog>
           <DialogTrigger>
-            <Button
-              className={'w-full'}
-              type={'button'}
-            >
+            <Button className={"w-full"} type={"button"}>
               Click me!
             </Button>
           </DialogTrigger>
@@ -76,16 +73,34 @@ export const ModalWithoutCross: Story = {
               Dialog description dialog description dialog description.
             </DialogDescription>
             <DialogFooter>
-              <Button
-                className={'w-full'}
-                type={'button'}
-              >
+              <Button className={"w-full"} type={"button"}>
                 Footer for button
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
       </>
-    )
+    );
   },
-}
+};
+
+export const SimpleModalWindow = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Click me!</Button>
+      <SimpleModal
+        className={"flex flex-col gap-6 mb-6"}
+        onOpenChange={() => {}}
+        open={isOpen}
+        title={"Title"}
+      >
+        <Typography variant={"reg16"}>Some content</Typography>
+        <Button className={"w-max ml-auto"} onClick={() => setIsOpen(false)}>
+          OK
+        </Button>
+      </SimpleModal>
+    </>
+  );
+};
