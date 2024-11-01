@@ -25,7 +25,8 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy": "pnpm run build && gh-pages -d build"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.1",
