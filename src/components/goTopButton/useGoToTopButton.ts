@@ -20,7 +20,9 @@ export const useGoToTopButton = () => {
           return;
         });
       } else {
-        controls.start("hide");
+        controls.start("hide").then(() => {
+          return;
+        });
       }
     });
 
