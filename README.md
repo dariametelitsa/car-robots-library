@@ -19,13 +19,9 @@ A collection of reusable React components for building car-related user interfac
 To install the `car-robots-library`, you can use npm or yarn:
 
 ```sh
-npm install car-robots-library
+pnpm install car-robots-library
 ```
-or
 
-```sh
-yarn add car-robots-library
-```
 ## Usage
 
 Import the components you need from the library and use them in your React application:
@@ -55,6 +51,7 @@ export default App;
 - Modal
 - Calendar
 - Checkbox
+- Tabs
 
 ## Styling
 
