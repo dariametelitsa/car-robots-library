@@ -8,3 +8,4 @@ export * from "./baseModal";
 export * from "./checkbox";
 export * from "./tabs";
 export * from "./linkWithIcon";
+export * from "./slider";
