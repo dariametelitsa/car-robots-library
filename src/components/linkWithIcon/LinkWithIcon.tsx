@@ -16,7 +16,7 @@ type Props<T extends ElementType> = {
 } & ComponentPropsWithoutRef<T>;
 
 export const LinkWithIcon = React.forwardRef<HTMLElement, Props<ElementType>>(
-  function NavLink(
+  (
     {
       ActiveIcon,
       DefaultIcon,
@@ -29,7 +29,7 @@ export const LinkWithIcon = React.forwardRef<HTMLElement, Props<ElementType>>(
       ...rest
     },
     ref,
-  ) {
+  ) => {
     const Component = as || "a";
 
     return (
