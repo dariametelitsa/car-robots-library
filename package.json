@@ -1,7 +1,7 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -25,7 +25,8 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.1",
@@ -44,11 +45,11 @@
   "devDependencies": {
     "@chromatic-com/storybook": "1.9.0",
     "@eslint/js": "^9.13.0",
-    "@storybook/addon-storysource": "^8.4.0",
     "@storybook/addon-essentials": "8.3.6",
     "@storybook/addon-interactions": "8.3.6",
     "@storybook/addon-links": "8.3.6",
     "@storybook/addon-onboarding": "8.3.6",
+    "@storybook/addon-storysource": "^8.4.0",
     "@storybook/addon-viewport": "^8.3.6",
     "@storybook/blocks": "8.3.6",
     "@storybook/builder-vite": "^8.4.0",
@@ -57,6 +58,8 @@
     "@storybook/react-vite": "8.3.6",
     "@storybook/test": "8.3.6",
     "@storybook/theming": "^8.3.6",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "@types/node": "^22.8.0",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
@@ -68,14 +71,16 @@
     "eslint-plugin-react-refresh": "^0.4.13",
     "eslint-plugin-storybook": "^0.10.1",
     "globals": "^15.11.0",
+    "jsdom": "^25.0.1",
     "postcss": "^8.4.47",
     "storybook": "8.3.6",
     "tailwindcss": "^3.4.14",
+    "tailwindcss-radix": "^3.0.5",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.10.0",
     "vite": "^5.4.9",
     "vite-plugin-dts": "^4.3.0",
-    "tailwindcss-radix": "^3.0.5"
+    "vitest": "^2.1.8"
   },
   "eslintConfig": {
     "extends": [
