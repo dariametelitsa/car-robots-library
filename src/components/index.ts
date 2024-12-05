@@ -7,3 +7,4 @@ export * from "./calendar";
 export * from "./baseModal";
 export * from "./checkbox";
 export * from "./tabs";
+export * from "./linkWithIcon";
