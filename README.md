@@ -21,7 +21,11 @@ To install the `car-robots-library`, you can use npm or yarn:
 ```sh
 pnpm install car-robots-library
 ```
+or
 
+```sh
+yarn add car-robots-library
+```
 ## Usage
 
 Import the components you need from the library and use them in your React application:
