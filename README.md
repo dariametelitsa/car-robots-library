@@ -52,6 +52,8 @@ export default App;
 - Calendar
 - Checkbox
 - Tabs
+- Slider
+- Popover
 
 ## Styling
 
