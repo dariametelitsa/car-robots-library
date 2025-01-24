@@ -13,12 +13,6 @@ const meta = {
     variant: "reg16",
   },
   argTypes: {
-    children: {
-      description: "The content inside the button",
-      table: {
-        disable: true,
-      },
-    },
     variant: {
       control: "select",
       options: [
