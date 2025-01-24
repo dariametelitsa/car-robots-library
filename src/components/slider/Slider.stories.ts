@@ -20,3 +20,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const BasicSlider: Story = {};
+
+export const ZeroSlider: Story = {
+  args: {
+    defaultValue: [0],
+  },
+};
+
+export const FullSlider: Story = {
+  args: {
+    defaultValue: [100],
+  },
+};
