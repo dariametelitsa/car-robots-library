@@ -16,7 +16,7 @@ const Button = React.forwardRef<React.ElementRef<"button">, ButtonProps>(
     return (
       <Component
         className={cn(buttonVariants({ variant }), className)}
-        {...ref}
+        ref={ref}
         {...props}
       />
     );
