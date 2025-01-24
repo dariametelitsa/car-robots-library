@@ -4,18 +4,6 @@ import { Tabs, TabsType } from "./Tabs";
 import { Typography } from "../typography";
 import { Button } from "../button";
 
-const meta = {
-  component: Tabs,
-  parameters: {
-    layout: "centered",
-  },
-  tags: ["autodocs"],
-  title: "Component/Tabs",
-} satisfies Meta<typeof Tabs>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
 const tabs: TabsType[] = [
   {
     content: (
@@ -60,8 +48,19 @@ const tabs: TabsType[] = [
   },
 ];
 
-export const BasicTabs: Story = {
+const meta = {
+  component: Tabs,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  title: "Component/Tabs",
   args: {
     tabsData: tabs,
   },
-};
+} satisfies Meta<typeof Tabs>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const BasicTabs: Story = {};

@@ -9,3 +9,4 @@ export * from "./checkbox";
 export * from "./tabs";
 export * from "./linkWithIcon";
 export * from "./slider";
+export * from "./popover";

@@ -19,10 +19,13 @@ export type TabsData = {
 const Tabs = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   TabsData
->(({ className, tabsData }, ref) => {
+>(({ className, tabsData, ...props }, ref) => {
   return (
     <TabsPrimitive.Root defaultValue={tabsData[0].id} ref={ref}>
-      <TabsPrimitive.List className={clsx("flex w-full bg-dark-700")}>
+      <TabsPrimitive.List
+        className={clsx("flex w-full bg-dark-700")}
+        {...props}
+      >
         {tabsData.map(({ disabled, id, title }) => (
           <TabsPrimitive.Trigger
             className={cn(
