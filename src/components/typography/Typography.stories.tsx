@@ -12,41 +12,35 @@ const meta = {
   args: {
     variant: "reg16",
   },
-  // argTypes: {
-  //   children: {
-  //     description: "The content inside the button",
-  //     table: {
-  //       disable: true,
-  //     },
-  //   },
-  //   variant: {
-  //     control: "select",
-  //     options: [
-  //       "large",
-  //       "h1",
-  //       "h2",
-  //       "h3",
-  //       "reg16",
-  //       "bold16",
-  //       "reg14",
-  //       "med14",
-  //       "bold14",
-  //       "small",
-  //       "semiBoldSmall",
-  //       "regularLink",
-  //       "smallLink",
-  //     ],
-  //   },
-  //},
+  argTypes: {
+    variant: {
+      control: "select",
+      options: [
+        "large",
+        "h1",
+        "h2",
+        "h3",
+        "reg16",
+        "bold16",
+        "reg14",
+        "med14",
+        "bold14",
+        "small",
+        "semiBoldSmall",
+        "regularLink",
+        "smallLink",
+      ],
+    },
+  },
 } satisfies Meta<typeof Typography>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// export const BasicTypography: Story = {
-//   render: (args) => <Typography {...args}>Text</Typography>,
-// };
+export const BasicTypography: Story = {
+  render: (args) => <Typography {...args}>Text</Typography>,
+};
 
 export const AllTypographyExample: Story = {
   render: () => (
