@@ -10,3 +10,4 @@ export * from "./tabs";
 export * from "./linkWithIcon";
 export * from "./slider";
 export * from "./popover";
+export * from "./circleLoader";
