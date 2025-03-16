@@ -1,7 +1,7 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.1.14",
+  "version": "0.1.15",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -29,6 +29,11 @@
     "test": "vitest"
   },
   "dependencies": {
+    "tailwind-merge": "^2.5.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.5",
@@ -37,12 +42,7 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "framer-motion": "^11.11.9",
-    "react-day-picker": "^9.0.8",
-    "tailwind-merge": "^2.5.2"
-  },
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-day-picker": "^9.0.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.9.0",

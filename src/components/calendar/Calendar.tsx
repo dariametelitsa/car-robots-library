@@ -1,3 +1,5 @@
+'use client'
+
 import { DayPicker, DayPickerProps } from "react-day-picker";
 
 type Props = DayPickerProps;

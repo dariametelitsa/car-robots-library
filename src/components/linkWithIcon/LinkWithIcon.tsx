@@ -1,3 +1,5 @@
+'use client'
+
 import { ComponentPropsWithoutRef, ElementType } from "react";
 import { cn } from "../../utils/cn.ts";
 

@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { useGoToTopButton } from "./useGoToTopButton.ts";
 import { ArrowBackOutline } from "../../assets/icons/outlineIcons";
