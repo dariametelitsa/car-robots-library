@@ -1,5 +1,6 @@
-import { cn } from "../../utils/cn.ts";
+'use client'
 
+import { cn } from "../../utils/cn.ts";
 
 export const Loader = () => {
   return (

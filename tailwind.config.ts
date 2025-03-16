@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import tailwindcssRadix from "tailwindcss-radix";
+
 export default {
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
@@ -88,5 +92,5 @@ export default {
       textColor: ["radix-state-active"],
     },
   },
-  plugins: [require("tailwindcss-radix")()],
+  plugins: [tailwindcssRadix()],
 };
