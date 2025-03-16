@@ -27,7 +27,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build Storybook
         run: pnpm run build-storybook
@@ -36,6 +36,6 @@ jobs:
         uses: bitovi/github-actions-react-to-github-pages@v1.2.4
         with:
           path: storybook-static
-          install_command: pnpm install
+          install_command: pnpm install --no-frozen-lockfile
           build_command: pnpm run build-storybook
           checkout: false
