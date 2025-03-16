@@ -1,7 +1,7 @@
 {
   "name": "car-robots-library",
   "private": false,
-  "version": "0.1.18",
+  "version": "0.1.19",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -32,6 +32,8 @@
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.5",
+    "@radix-ui/react-radio-group": "^1.2.3",
+    "@radix-ui/react-scroll-area": "^1.2.3",
     "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-slider": "^1.2.1",
     "@radix-ui/react-slot": "^1.1.0",

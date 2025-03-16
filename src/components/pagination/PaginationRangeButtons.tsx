@@ -1,3 +1,5 @@
+'use client'
+
 import { PageButton } from './PageButton'
 import { DOTS } from './hooks/usePaginationRange'
 import { Tooltip } from "../tooltip";

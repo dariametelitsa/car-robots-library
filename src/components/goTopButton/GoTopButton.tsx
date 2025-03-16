@@ -1,12 +1,19 @@
 'use client'
 
+import { RefObject } from 'react'
+import { ArrowBackOutline } from '../../assets/icons/outlineIcons'
+import { useGoToTopButton } from './useGoToTopButton'
 import { motion } from 'framer-motion'
-import { useGoToTopButton } from "./useGoToTopButton.ts";
-import { ArrowBackOutline } from "../../assets/icons/outlineIcons";
+import { cn } from "../../utils/cn.ts";
+import { Tooltip } from "../tooltip";
 
-export const GoTopButton = () => {
-  const { controls, isBrowser, scrollToTopHandler, scrollToTopVariants } =
-    useGoToTopButton()
+type Props = {
+  scrollInElementRef?: RefObject<HTMLDivElement> | null
+}
+
+export const GoTopButton = ({ scrollInElementRef }: Props) => {
+  const { controls, isBrowser, onScrollToTop, scrollToTopVariants, } =
+    useGoToTopButton(scrollInElementRef)
 
   if (!isBrowser) {
     return
@@ -15,17 +22,21 @@ export const GoTopButton = () => {
   return (
     <motion.button
       animate={controls}
-      className={'bg-dark-300 fixed right-7 bottom-7 p-2 rounded-sm'}
+      className={cn(
+        'hidden lg:block bg-dark-300 fixed right-7 p-2 rounded-sm bottom-20 lg:bottom-7'
+      )}
       initial={'hide'}
-      onClick={scrollToTopHandler}
+      onClick={onScrollToTop}
       type={'button'}
       variants={scrollToTopVariants}
     >
-      <ArrowBackOutline
-        className={'rotate-90'}
-        height={'20'}
-        width={'20'}
-      />
+      <Tooltip title='Go to top'>
+        <ArrowBackOutline
+          className={'rotate-90'}
+          height={'20'}
+          width={'20'}
+        />
+      </Tooltip>
     </motion.button>
   )
 }

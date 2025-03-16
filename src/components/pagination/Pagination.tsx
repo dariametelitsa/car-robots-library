@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowIosForward } from '../../assets/icons/filledIcons'
 import { ArrowIosBackOutline } from '../../assets/icons/outlineIcons'
 

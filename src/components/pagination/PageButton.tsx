@@ -1,3 +1,5 @@
+'use client'
+
 import React, { ComponentProps } from 'react'
 import { cn } from "../../utils/cn.ts";
 import { typographyVariants } from "../typography";
