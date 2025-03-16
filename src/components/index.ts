@@ -11,3 +11,4 @@ export * from "./linkWithIcon";
 export * from "./slider";
 export * from "./popover";
 export * from "./circleLoader";
+export * from "./datePicker";
