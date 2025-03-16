@@ -12,3 +12,8 @@ export * from "./slider";
 export * from "./popover";
 export * from "./circleLoader";
 export * from "./datePicker";
+export * from "./fullscreenLoader";
+export * from "./overlay";
+export * from "./pagination";
+export * from "./tooltip";
+export * from "./select";
