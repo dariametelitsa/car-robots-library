@@ -2,7 +2,7 @@
 
 import { ComponentPropsWithoutRef, ElementType } from 'react'
 
-import Loader from '@/assets/images/loader.svg'
+import Loader from '../../assets/images/loader.svg'
 import { cn } from "../../utils/cn.ts"
 
 type Props<T extends ElementType = "img"> = {
