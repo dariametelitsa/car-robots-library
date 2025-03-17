@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dariametelitsa/car-robots-library/main/LICENSE)
 
 
-
 A collection of reusable React components for building car-related user interfaces.
 
 ## Table of Contents
@@ -43,17 +42,36 @@ export default App;
 ```
 
 ## Components
-- Button
-- Card
-- Icon set
-- Loader
-- Go to top button
 - Modal
+- Button
 - Calendar
+- Card
 - Checkbox
+- Loaders (circle, line)
+- Go to top button
+- Overlay
+- Icon set
+- Pagination
 - Tabs
 - Slider
 - Popover
+- Tooltip
+- Radio group
+- Scrollbar
+- Select
+- Skeleton
+- Slider
+- Table
+- Textarea
+- Text unfolding
+- Toast
+- Typography
+
+## Hooks
+- useDebounce
+- useClickOutside
+- useModal
+- useToggle
 
 ## Styling
 
@@ -63,6 +81,17 @@ To ensure the styles are applied correctly, import the CSS file from the library
 ```jsx
 import 'car-robots-library/dist/style.css'; 
 ```
+
+## Project Contributors
+| Name            | Role                 | GitHub Profile|
+|-----------------|----------------------|----------|
+| Tatiana Kostecki | Frontend Developer   | @tanya-kostecki   |
+| Alexander Kvashnin | Frontend Developer   | @KvashninAlexander2023   |
+| Bair Ochirov    | Frontend Developer   | @OchirovBair   |
+| Stanislav Petrov | Frontend Developer   | @Sun-ny11   |
+| Vladislav Beliaev | Frontend Developer   | @jocker-py  |
+| Daria Metelitsa | Frontend Developer   | @dariametelitsa   |
+
 
 ## Contact
 
