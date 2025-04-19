@@ -69,6 +69,12 @@ export default {
         600: "600",
         700: "700",
       },
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit, minmax(250px, 1fr))",
+      },
+      height: {
+        headCalc: "calc(100vh - var(--header-height))",
+      },
       keyframes: {
         animationLoader: {
           "0%": { left: "0", transform: "translateX(-100%)" },
