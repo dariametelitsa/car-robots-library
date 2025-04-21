@@ -122,14 +122,10 @@ type SelectCustomComponentProps = {
   triggerClassname?: string
 } & SelectPrimitiveProps
 
-const SelectCustomComponent = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Root>,
-  SelectCustomComponentProps
->(
-  (
-    { children, className, label, placeholder, triggerClassname, ...props },
-    ref
-  ) => {
+const SelectCustomComponent = (
+  { children, className, label, placeholder, triggerClassname, ...props }: SelectCustomComponentProps,
+  ref: React.ForwardedRef<React.ElementRef<typeof SelectPrimitive.Root>>
+) => {
     return (
       <Select {...props}>
         <SelectGroup
@@ -148,12 +144,12 @@ const SelectCustomComponent = React.forwardRef<
       </Select>
     )
   }
-)
 
-SelectCustomComponent.displayName = 'SelectCustomComponent'
+const ForwardedSelectCustomComponent = React.forwardRef(SelectCustomComponent);
+ForwardedSelectCustomComponent.displayName = 'SelectCustomComponent';
 
 export {
-  SelectCustomComponent as Select,
+  ForwardedSelectCustomComponent as Select,
   SelectContent,
   SelectGroup,
   SelectItem,
