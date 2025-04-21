@@ -69,6 +69,12 @@ export default {
         600: "600",
         700: "700",
       },
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit, minmax(250px, 1fr))",
+      },
+      height: {
+        headCalc: "calc(100vh - var(--header-height))",
+      },
       keyframes: {
         animationLoader: {
           "0%": { left: "0", transform: "translateX(-100%)" },
@@ -77,6 +83,15 @@ export default {
       },
       spacing: {
         scrollbar: "16px",
+      },
+      screens: {
+        'sm-500': '500px',
+        xs: '360px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px'
       },
     },
   },
