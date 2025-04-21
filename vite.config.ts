@@ -12,10 +12,6 @@ export default defineConfig({
     react(),
     dts({ tsconfigPath: "./tsconfig.app.json", rollupTypes: true }),
   ],
-  test: {
-    environment: "jsdom",
-    globals: true,
-  },
   css: {
     postcss: {
       plugins: [tailwindcss()],
