@@ -1,15 +1,15 @@
 'use client'
 
 import * as React from 'react'
-import { ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ReactNode } from 'react'
 
-import ArrowIosDownOutline from '../../assets/icons/outlineIcons/ArrowIosDownOutline'
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { clsx } from 'clsx'
-import { cn } from "../../utils/cn.ts";
+import { ArrowIosDownOutline } from "../../assets/icons";
 import { typographyVariants } from "../typography";
+import { cn } from "../../utils/cn.ts";
 
-const Select = SelectPrimitive.Root
+const SelectBasic = SelectPrimitive.Root
 
 const SelectGroup = SelectPrimitive.Group
 
@@ -113,23 +113,24 @@ const SelectSeparator = React.forwardRef<
 
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
 
-
-type SelectCustomComponentProps = {
+type Props = {
   children: ReactNode
   className?: string
   label?: string
   placeholder?: number | string
   triggerClassname?: string
-  defaultValue: string
-  disabled: boolean
-}
+} & ComponentPropsWithoutRef<typeof SelectPrimitive.Root>
 
-const SelectCustomComponent = (
-  { children, className, label, placeholder, triggerClassname, ...props }: SelectCustomComponentProps,
-  ref: React.ForwardedRef<React.ElementRef<typeof SelectPrimitive.Root>>
-) => {
+const Select = React.forwardRef<
+  React.ElementRef<typeof SelectPrimitive.Root>,
+  Props
+>(
+  (
+    { children, className, label, placeholder, triggerClassname, ...props },
+    ref
+  ) => {
     return (
-      <Select {...props}>
+      <SelectBasic {...props}>
         <SelectGroup
           className={className}
           ref={ref}
@@ -143,15 +144,15 @@ const SelectCustomComponent = (
           </SelectTrigger>
           <SelectContent>{children}</SelectContent>
         </SelectGroup>
-      </Select>
+      </SelectBasic>
     )
   }
+)
 
-const ForwardedSelectCustomComponent = React.forwardRef(SelectCustomComponent);
-ForwardedSelectCustomComponent.displayName = 'SelectCustomComponent';
+Select.displayName = 'Select'
 
 export {
-  ForwardedSelectCustomComponent as Select,
+  Select,
   SelectContent,
   SelectGroup,
   SelectItem,
