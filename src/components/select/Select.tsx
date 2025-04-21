@@ -112,6 +112,7 @@ const SelectSeparator = React.forwardRef<
 ))
 
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
+type SelectPrimitiveProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Root>;
 
 type Props = {
   children: ReactNode
@@ -119,9 +120,9 @@ type Props = {
   label?: string
   placeholder?: number | string
   triggerClassname?: string
-} & ComponentPropsWithoutRef<typeof SelectPrimitive.Root>
+} & SelectPrimitiveProps
 
-const Select = React.forwardRef<
+const SelectComponent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Root>,
   Props
 >(
@@ -149,10 +150,10 @@ const Select = React.forwardRef<
   }
 )
 
-Select.displayName = 'Select'
+SelectComponent.displayName = 'Select'
 
 export {
-  Select,
+  SelectComponent as Select,
   SelectContent,
   SelectGroup,
   SelectItem,
