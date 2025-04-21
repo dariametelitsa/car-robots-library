@@ -122,7 +122,7 @@ type Props = {
   triggerClassname?: string
 } & SelectPrimitiveProps
 
-const Select = React.forwardRef<
+const SelectComponent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Root>,
   Props
 >(
@@ -150,10 +150,10 @@ const Select = React.forwardRef<
   }
 )
 
-Select.displayName = 'Select'
+SelectComponent.displayName = 'Select'
 
 export {
-  Select,
+  SelectComponent as Select,
   SelectContent,
   SelectGroup,
   SelectItem,
