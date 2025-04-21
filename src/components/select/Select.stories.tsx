@@ -1,5 +1,5 @@
 import { FlagRussia, FlagUnitedKingdom } from '../../assets/icons/filledIcons'
-import { Select, SelectItem } from './Select'
+import { Select, SelectItem } from './Select.tsx'
 import { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof Select> = {

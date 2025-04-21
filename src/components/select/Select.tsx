@@ -9,7 +9,7 @@ import { clsx } from 'clsx'
 import { cn } from "../../utils/cn.ts";
 import { typographyVariants } from "../typography";
 
-const SelectBasic = SelectPrimitive.Root
+const Select = SelectPrimitive.Root
 
 const SelectGroup = SelectPrimitive.Group
 
@@ -131,7 +131,7 @@ const SelectComponent = React.forwardRef<
     ref
   ) => {
     return (
-      <SelectBasic {...props}>
+      <Select {...props}>
         <SelectGroup
           className={className}
           ref={ref}
@@ -145,12 +145,12 @@ const SelectComponent = React.forwardRef<
           </SelectTrigger>
           <SelectContent>{children}</SelectContent>
         </SelectGroup>
-      </SelectBasic>
+      </Select>
     )
   }
 )
 
-SelectComponent.displayName = 'Select'
+SelectComponent.displayName = 'SelectComponent'
 
 export {
   SelectComponent as Select,
