@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { ComponentPropsWithoutRef, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import ArrowIosDownOutline from '../../assets/icons/outlineIcons/ArrowIosDownOutline'
 import * as SelectPrimitive from '@radix-ui/react-select'
@@ -112,7 +112,7 @@ const SelectSeparator = React.forwardRef<
 ))
 
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName
-type SelectPrimitiveProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Root>;
+
 
 type SelectCustomComponentProps = {
   children: ReactNode
@@ -120,7 +120,9 @@ type SelectCustomComponentProps = {
   label?: string
   placeholder?: number | string
   triggerClassname?: string
-} & SelectPrimitiveProps
+  defaultValue: string
+  disabled: boolean
+}
 
 const SelectCustomComponent = (
   { children, className, label, placeholder, triggerClassname, ...props }: SelectCustomComponentProps,
